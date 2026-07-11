@@ -138,7 +138,6 @@ setInterval(() => {
   showSlide(current);
 }, 5000);
 
-// Gallery carousel (fancy + simple)
 const gallery = document.querySelector(".gallery-carousel");
 const galleryTrack = document.querySelector(".gallery-track");
 const galleryPrev = document.querySelector(".gallery-prev");

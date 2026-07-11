@@ -177,7 +177,7 @@
     </div>
 
     <div class="about-image">
-      <img src="../images/cafe.webp" alt="">
+      <img src="../images/image1.webp" alt="">
     </div>
 
   </div>

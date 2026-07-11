@@ -83,17 +83,18 @@
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    min-width:75px;
-    padding:0.45rem 0.85rem;
+    min-width:;
+    padding:8px 14px;
     font-family:'Cinzel', serif;
     color:#ffffff;
     background:#3a5836;
     border:2px solid #3a5836;
-    border-radius:999px;
+    border-radius:700px;
     text-decoration:none;
-    font-size:0.88rem;
-    letter-spacing:0.8px;
+    font-size:0.8rem;
+    letter-spacing:0.5px;
     line-height:1;
+    white-space:nowrap;
 }
 
 .view-btn:hover,

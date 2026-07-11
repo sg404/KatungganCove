@@ -60,9 +60,10 @@ img{
 .nav-container{
   display:flex;
   align-items:center;
-  justify-content:space-between;
+  justify-content:flex-start;
   gap:14px;
   padding:0 24px;
+  margin:0;
 }
 
 @media (max-width:900px){
@@ -91,7 +92,7 @@ img{
   justify-content:flex-start;
   gap:12px;
   text-decoration:none;
-  margin-right:auto;
+  margin-right:8px;
   flex-shrink:0;
   text-align:left;
   min-width:0;
@@ -118,19 +119,21 @@ img{
 /* Navigation */
 
 nav{
-  margin-left:20px;
+  margin-left:auto;
   display:flex;
   justify-content:flex-end;
   flex-shrink:0;
+  margin-right:0;
 }
 
 .nav-links{
   display:flex;
   align-items:center;
-  gap:35px;
+  gap:38px;
   list-style:none;
   flex-wrap:wrap;
   justify-content:flex-end;
+  margin-left:auto;
 }
 
 .nav-links a{
