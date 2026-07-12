@@ -6,6 +6,7 @@
   <title>Katunggan Cove Resort</title>
   <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
 
+  <link rel="stylesheet" href="../css/header-footer.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/accommodation.css">
 
