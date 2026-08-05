@@ -45,7 +45,7 @@
       <!-- Standard Queen -->
       <div class="accommodation-room">
         <div class="room-image">
-          <img src="../images/image1.webp" alt="Standard Queen">
+          <img src="../images/rooms/IMG_0956.svg" alt="Standard Queen">
         </div>
 
         <div class="room-info">
@@ -63,7 +63,7 @@
       <!-- Triple Room -->
       <div class="accommodation-room">
         <div class="room-image">
-          <img src="../images/image2.webp" alt="Triple Room">
+          <img src="../images/rooms/IMG_0980.svg" alt="Triple Room">
         </div>
 
         <div class="room-info">
@@ -81,7 +81,7 @@
       <!-- Premium Queen -->
       <div class="accommodation-room">
         <div class="room-image">
-          <img src="../images/image3.webp" alt="Premium Queen">
+          <img src="../images/rooms/IMG_0988.svg" alt="Premium Queen">
         </div>
 
         <div class="room-info">
@@ -99,7 +99,7 @@
       <!-- Quad Room -->
       <div class="accommodation-room">
         <div class="room-image">
-          <img src="../images/image4.webp" alt="Quad Room">
+          <img src="../images/rooms/IMG_0996.svg" alt="Quad Room">
         </div>
 
         <div class="room-info">
@@ -117,7 +117,7 @@
       <!-- Villa -->
       <div class="accommodation-room">
         <div class="room-image">
-          <img src="../images/image5.webp" alt="Villa">
+          <img src="../images/rooms/IMG_1007.svg" alt="Villa">
         </div>
 
         <div class="room-info">
