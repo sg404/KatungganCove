@@ -1,3 +1,29 @@
+// About content reveal on scroll (triggers from up or down)
+(function () {
+  const aboutContent = document.querySelector(".about-section .about-content");
+  if (!aboutContent) return;
+
+  if (!("IntersectionObserver" in window)) {
+    aboutContent.classList.add("reveal");
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          aboutContent.classList.add("reveal");
+        } else {
+          aboutContent.classList.remove("reveal");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  observer.observe(aboutContent);
+})();
+
 // Navbar background on scroll
 const navbar = document.querySelector(".navbar");
 let isScrolling = false;
@@ -126,17 +152,19 @@ function showSlide(index) {
   slides.forEach(slide => slide.classList.remove("active"));
   dots.forEach(dot => dot.classList.remove("active-dot"));
 
-  slides[index].classList.add("active");
-  dots[index].classList.add("active-dot");
+  if (slides[index]) slides[index].classList.add("active");
+  if (dots[index]) dots[index].classList.add("active-dot");
 }
 
-setInterval(() => {
-  current++;
-  if (current >= slides.length) {
-    current = 0;
-  }
-  showSlide(current);
-}, 5000);
+if (slides.length > 1) {
+  setInterval(() => {
+    current++;
+    if (current >= slides.length) {
+      current = 0;
+    }
+    showSlide(current);
+  }, 5000);
+}
 
 const gallery = document.querySelector(".gallery-carousel");
 const galleryTrack = document.querySelector(".gallery-track");
@@ -194,7 +222,112 @@ if (gallery && galleryTrack && galleryPrev && galleryNext) {
     startX = null;
   });
 
-  // keep in sync on resize
+// keep in sync on resize
   window.addEventListener("resize", update);
   update();
 }
+
+// Testimonials auto-scroll carousel
+(function () {
+  const track = document.querySelector(".testimonial-track");
+  if (!track) return;
+
+  const viewport = document.querySelector(".testimonial-viewport");
+  const cards = () => Array.from(track.querySelectorAll(".testimonial-card"));
+  let index = 0;
+
+  function getCardWidth() {
+    const first = cards()[0];
+    if (!first) return 0;
+    const styles = window.getComputedStyle(first);
+    const marginRight = parseFloat(styles.marginRight || "0");
+    return first.getBoundingClientRect().width + marginRight + 30; // include gap
+  }
+
+  function updateTransform() {
+    const list = cards();
+    if (!list.length) return;
+    const cardWidth = getCardWidth();
+    track.style.transform = `translateX(${-index * cardWidth}px)`;
+  }
+
+  function next() {
+    const list = cards();
+    if (!list.length) return;
+    let visible = 3;
+    if (window.innerWidth <= 768) visible = 1;
+    else if (window.innerWidth <= 1024) visible = 2;
+
+    index++;
+    if (index > list.length - visible) index = 0;
+    updateTransform();
+  }
+
+  // Auto scroll every 4 seconds
+  setInterval(next, 4000);
+
+  // Keep track width in sync when needed
+  window.addEventListener("resize", () => {
+    index = 0;
+    updateTransform();
+  });
+
+  updateTransform();
+})();
+
+// Why Choose - Scroll reveal for images
+(function () {
+  const panels = document.querySelectorAll(".why-choose .why-panel");
+  if (!panels.length) return;
+
+  if (!("IntersectionObserver" in window)) {
+    panels.forEach((p) => p.classList.add("revealed"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  panels.forEach((panel) => {
+    panel.classList.add("reveal-enter");
+    observer.observe(panel);
+  });
+})();
+
+// Why Choose - Accordion interaction
+(function () {
+  const accordion = document.querySelector(".why-accordion");
+  const features = document.querySelectorAll(".why-feature");
+  if (!accordion) return;
+
+  const panels = Array.from(accordion.querySelectorAll(".why-panel"));
+
+  function setActiveByName(name) {
+    panels.forEach((panel) => {
+      panel.classList.toggle("active", panel.dataset.feature === name);
+    });
+  }
+
+  // Click a panel to expand it
+  panels.forEach((panel) => {
+    panel.addEventListener("click", () => {
+      setActiveByName(panel.dataset.feature);
+    });
+  });
+
+  // Hover a left feature item to expand the matching panel
+  features.forEach((feature) => {
+    feature.addEventListener("mouseenter", () => {
+      setActiveByName(feature.dataset.target);
+    });
+  });
+})();

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Katunggan Cove Resort</title>
-  <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="../images/logo3.svg" type="image/svg+xml">
 
   <link rel="stylesheet" href="../css/header-footer.css">
   <link rel="stylesheet" href="../css/style.css">
@@ -19,170 +19,239 @@
 <!-- ================= HERO ================= -->
 <section class="hero">
 
-  <div class="slides">
-    <img src="../images/image1.webp" class="slide active" alt="">
-    <img src="../images/image2.webp" class="slide" alt="">
-    <img src="../images/image3.webp" class="slide" alt="">
-    <img src="../images/image4.webp" class="slide" alt="">
-    <img src="../images/image5.webp" class="slide" alt="">
-  </div>
+<video class="hero-video" autoplay muted loop playsinline poster="../images/image1.webp">
+    <source src="../videos/hero-video.mp4" type="video/mp4">
+  </video>
 
   <div class="overlay"></div>
 
-  <div class="hero-content">
-
-    <h1>Katunggan Cove Resort</h1>
-
-    <span>
-      Discover your private nature escape in Guimaras.
-      Explore mangroves, enjoy island tours, relax in our pools and jacuzzi,
-      and savor local cuisine at our restaurant and café.
-    </span>
-
-  </div>
-
-  <div class="dots">
-    <span class="dot active-dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
+  <div class="hero-content"></div>
 
 </section>
 
 <!-- ================= ABOUT ================= -->
-<section class="section">
+<section class="section about-section">
   <div class="container about-grid">
     
-    <div class="about-image round-image">
-      <img src="../images/image1.webp" alt="Katunggan Cove Resort" loading="lazy" width="600" height="450">
-    </div>
 
-    <div class="about-content">
-      <p class="section-subtitle">Our Sanctuary</p>
-      <h2>A Peaceful Retreat</h2>
+
+<div class="about-content">
+      <h2>Find Your Quiet Here</h2>
       <p>
-        Nestled in the beautiful island of Guimaras, Katunggan Cove Resort
-        offers a peaceful retreat surrounded by mangroves, pristine waters,
-        and breathtaking sunsets. Experience comfort, relaxation, and
-        unforgettable adventures with your family and friends.
+        Katunggan Cove Resort is a private nature sanctuary nestled in
+        Guimaras, offering serene stays and immersive island experiences
+        with refined yet affordable comfort. As a premium boutique
+        eco-resort, we embrace quiet luxury and sustainability—welcoming
+        families, couples, barkada groups, small teams, and nature lovers
+        seeking peace.
       </p>
-    </div>
+</div>
 
-  </div>
+</div>
 </section>
 
 <!-- ================= ACCOMMODATION ================= -->
 <section class="section bg-light">
+  <div class="container accommodation-page">
 
-  <div class="container">
+    <?php
+      // Accommodation intro section content
+      $accommIntro = [
+        'subtitle'    => 'Welcome to Katunggan Cove',
+        'title'       => 'Luxury hotel in the heart of nature',
+        'body'        => 'Nestled within lush mangroves and the serene shores of Guimaras, Katunggan Cove Resort blends quiet luxury with sustainable, intimate hospitality. Every room and suite is thoughtfully designed to bring you closer to nature without compromising comfort, privacy, or refined detail.',
+        'button_text' => 'Read More',
+        'button_link' => 'accommodation.php',
+        'images'      => [
+          '../images/image1.webp',
+          '../images/image3.webp',
+        ],
+      ];
 
-    <div class="section-title">
-      <h2>Relax in Comfort</h2>
-    </div>
+      // Rating badges (social proof)
+      $accommRatings = [
+        [
+          'logo'        => 'B',
+          'platform'    => 'Booking.com',
+          'rating'      => '4.9/5',
+          'sentiment'   => 'Excellent',
+          'sentiment_color' => '#2e7d32',
+          'reviews'     => '3.5K Reviews on Booking',
+        ],
+        [
+          'logo'        => 'A',
+          'platform'    => 'Agoda',
+          'rating'      => '4.8/5',
+          'sentiment'   => 'Excellent',
+          'sentiment_color' => '#2e7d32',
+          'reviews'     => '2.1K Reviews on Agoda',
+        ],
+        [
+          'logo'        => 'T',
+          'platform'    => 'TripAdvisor',
+          'rating'      => '4.7/5',
+          'sentiment'   => 'Good',
+          'sentiment_color' => '#c49a70',
+          'reviews'     => '1.8K Reviews on TripAdvisor',
+        ],
+      ];
+    ?>
 
-
-    <div class="cards">
-
-      <div class="card">
-        <img src="../images/image1.webp" alt="Villa" loading="lazy">
-        <div class="card-content">
-          <h3>Villa</h3>
-          <p>A spacious getaway designed for families and groups seeking comfort, privacy, and a relaxing resort experience.</p>
+    <!-- Elegant intro: asymmetric dual-image & text grid -->
+    <div class="accomm-intro">
+      <div class="accomm-intro-images">
+        <div class="intro-img intro-img-left">
+          <img src="<?php echo htmlspecialchars($accommIntro['images'][0]); ?>" alt="Interior room view" loading="lazy">
+        </div>
+        <div class="intro-img intro-img-right">
+          <img src="<?php echo htmlspecialchars($accommIntro['images'][1]); ?>" alt="Suite interior" loading="lazy">
         </div>
       </div>
 
-      <div class="card">
-        <img src="../images/image2.webp" alt="Premium Queen" loading="lazy">
-        <div class="card-content">
-          <h3>Premium Queen</h3>
-          <p>A cozy retreat featuring a private terrace, perfect for couples or guests looking for a peaceful and refreshing stay.</p>
-        </div>
+<div class="accomm-intro-text">
+        <p class="intro-subtitle"><?php echo htmlspecialchars($accommIntro['subtitle']); ?></p>
+        <h2 class="intro-title"><?php echo htmlspecialchars($accommIntro['title']); ?></h2>
+        <p class="intro-body"><?php echo htmlspecialchars($accommIntro['body']); ?></p>
+        <a href="<?php echo htmlspecialchars($accommIntro['button_link']); ?>" class="intro-btn"><?php echo htmlspecialchars($accommIntro['button_text']); ?> &rarr;</a>
       </div>
+    </div>
 
-      <div class="card">
-        <img src="../images/image3.webp" alt="Quad Room" loading="lazy">
-        <div class="card-content">
-          <h3>Quad Room</h3>
-          <p>Ideal for families and friends, offering generous space and comfortable accommodations for memorable vacations together.</p>
-        </div>
-      </div>
+    
+    
+
+      
+      
 
     </div>
 
-  </div>
-
-</section>
-
-
-
-<!-- ================= GALLERY (CAROUSEL) ================= -->
-<section class="section bg-light">
-  <div class="container">
-    <div class="section-title">
-      <h2>Capture Beautiful Memories</h2>
-    </div>
-
-
-    <div class="gallery-carousel" aria-label="Gallery carousel">
-      <button class="gallery-nav gallery-prev" type="button" aria-label="Previous image">&#10094;</button>
-
-      <div class="gallery-viewport">
-        <div class="gallery-track">
-          <div class="gallery-card">
-            <img src="../images/image1.webp" alt="Gallery image 1" loading="lazy">
-          </div>
-          <div class="gallery-card">
-            <img src="../images/image2.webp" alt="Gallery image 2" loading="lazy">
-          </div>
-          <div class="gallery-card">
-            <img src="../images/image3.webp" alt="Gallery image 3" loading="lazy">
-          </div>
-          <div class="gallery-card">
-            <img src="../images/image4.webp" alt="Gallery image 4" loading="lazy">
-          </div>
-          <div class="gallery-card">
-            <img src="../images/image5.webp" alt="Gallery image 5" loading="lazy">
-          </div>
-          <div class="gallery-card">
-            <img src="../images/image5.webp" alt="Gallery image 6" loading="lazy">
-          </div>
-        </div>
-      </div>
-
-      <button class="gallery-nav gallery-next" type="button" aria-label="Next image">&#10095;</button>
-    </div>
   </div>
 </section>
 
+<!-- ================= WHY CHOOSE ================= -->
+<?php
+  $features = [
+[
+      'title'       => 'Quiet Luxury',
+      'description' => 'Unwind in refined, thoughtfully designed spaces that prioritize calm, comfort, and understated elegance.',
+      'icon'        => 'leaf',
+      'image_url'   => '../images/image1.webp',
+      'link'        => '#',
+    ],
+    [
+      'title'       => 'Sustainable Living',
+      'description' => 'Embrace eco-conscious stays rooted in nature, from lush mangroves to responsible, low-impact hospitality.',
+      'icon'        => 'sprout',
+      'image_url'   => '../images/image2.webp',
+      'link'        => '#',
+    ],
+    [
+      'title'       => 'Island Experiences',
+      'description' => 'Discover authentic island adventures, breathtaking sunsets, and memories that stay with you long after.',
+      'icon'        => 'waves',
+      'image_url'   => '../images/image3.webp',
+      'link'        => '#',
+    ],
+    [
+      'title'       => 'Private Beaches',
+      'description' => 'Step onto serene, secluded shores and feel the soft sand between your toes in total peace.',
+      'icon'        => 'leaf',
+      'image_url'   => '../images/image4.webp',
+      'link'        => '#',
+    ],
+    [
+      'title'       => 'Sunset Views',
+      'description' => 'Watch golden skies melt over the cove—a daily show of color and calm you will never forget.',
+      'icon'        => 'waves',
+      'image_url'   => '../images/image5.webp',
+      'link'        => '#',
+    ],
+  ];
+?>
 
-<!-- ================= CAFE ================= -->
-<section class="section">
+<section class="why-choose" id="why-choose">
+  <div class="why-choose-inner">
 
-  <div class="container about-grid">
-
-    <div class="about-content">
-      <p class="section-subtitle">RESTAURANT & CAFÉ</p>
-
-      <h2>Local Flavors and Island Delights</h2>
-
-      <p>
-        Enjoy delicious meals and refreshing beverages while taking in
-        the beautiful scenery of Katunggan Cove Resort.
-      </p>
-
-    <a href="cafe.php" class="btn">
-        View Menu
-      </a>
+    <!-- TOP: IMAGES -->
+    <div class="why-accordion">
+      <?php foreach ($features as $i => $feature): ?>
+        <div class="why-panel" data-feature="<?php echo htmlspecialchars($feature['title']); ?>">
+          <img src="<?php echo htmlspecialchars($feature['image_url']); ?>" alt="<?php echo htmlspecialchars($feature['title']); ?>" loading="lazy">
+          <div class="why-panel-overlay"></div>
+          <div class="why-panel-label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8L12 2z"/></svg>
+            <span><?php echo htmlspecialchars($feature['title']); ?></span>
+          </div>
+        </div>
+      <?php endforeach; ?>
     </div>
 
-    <div class="about-image">
-      <img src="../images/image1.webp" alt="">
+</div>
+</section>
+
+<!-- ================= BLANK SPACE ================= -->
+<section class="why-blank"></section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="section testimonials">
+  <div class="container">
+
+    <div class="section-title">
+      <p class="section-subtitle">TESTIMONIALS</p>
+      <h2>What Our Guests Say</h2>
+    </div>
+
+    <div class="testimonial-viewport">
+      <div class="testimonial-track">
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Katunggan Cove is pure paradise. The quiet luxury and breathtaking views made our escape unforgettable. We can't wait to come back!"</p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Maria Santos</span>
+            <span class="testimonial-role">Vacationer</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The staff were so warm and attentive. Every detail felt intentional—from the sustainably designed rooms to the delicious local food."</p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">James Cruz</span>
+            <span class="testimonial-role">Couple Getaway</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"We booked the villa for our family and it exceeded all expectations. Spacious, private, and surrounded by nature. Truly a hidden gem."</p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Alyssa Reyes</span>
+            <span class="testimonial-role">Family Trip</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The sunset views here are unreal. Watching the golden sky melt over the cove is something I will never forget. Highly recommend!"</p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Miguel Fernando</span>
+            <span class="testimonial-role">Solo Traveler</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"From the private beach to the serene mangroves, everything was perfect. A peaceful retreat that balances luxury and nature beautifully."</p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Sofia Garcia</span>
+            <span class="testimonial-role">Barkada Group</span>
+          </div>
+        </div>
+
+      </div>
     </div>
 
   </div>
-
 </section>
 
 <!-- ================= CTA ================= -->

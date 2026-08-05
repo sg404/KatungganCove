@@ -1,36 +1,46 @@
-# TODO (Katunggan Cove Resort)
+# TODO
 
-## 1) Index ACCOMMODATIONS update
-- [x] Inspect existing ACCOMMODATIONS section in `index.php`
-- [x] Replace 3 cards with: Villa, Premium Queen, Quad Room (exact provided text)
-- [x] Ensure section title stays: `ACCOMMODATIONS` and subtitle: `Relax in Comfort`
-- [x] Remove duplicated paragraph under Quad Room (fix repeat)
+## Complete
+- [x] php/index.php: Replace hero image slider with hero-video.mp4
+- [x] css/style.css: Add .hero-video styles
+- [x] Restore about section text to original
 
-## 2) Accommodation page rebuild
-- [x] Replace placeholder accommodations content in `accommodation.php` with 5 cards:
+## New "Why Choose / Katunggan Cove" Section
+- [x] php/index.php: Add PHP features array and render left content + right accordion
+- [x] css/style.css: Add .why-choose section styles (grid, corners, badges, accordion, mobile)
+- [x] js/script.js: Add accordion expand/hover interactions
+- [x] Verify layout and interactions
 
-  - Standard Queen
-  - Triple Room
-  - Premium Queen
-  - Quad Room
-  - Villa
-- [x] Use modern icon components (Bed, Users/People, Tag/Peso) instead of emojis
-- [x] Add responsive resort-inspired layout and subtle hover/animation
-- [x] Use high-quality room images (map to existing `images/room-*.webp`)
-- [x] Ensure rates/capacities match required values
+## Footer Redesign
+- [x] Reduce footer height (padding 56px -> 24px)
+- [x] Mangrove green gradient over low-opacity background image
+- [x] Font colors restricted to palette (#c5a34b, #385035, #fff6dc)
+- [x] Add Instagram social icon
+- [x] Use logo3.svg in footer brand
+- [x] Redesign map (rounded corners, gold border, shadow) & reduce map size
 
-## 3) Navbar click smooth transition / UX polish
-- [x] Add a subtle transition/fade effect when clicking navbar links
-- [x] Ensure mobile menu close behavior remains correct
+## Testimonials ("What Our Guests Say")
+- [x] php/index.php: Add testimonials section with 5 guest comments below Cafe
+- [x] css/style.css: Rounded-square card styles, stars, author block
+- [x] js/script.js: Auto-scrolling carousel every 4s (3/2/1 per view)
+- [x] Responsive breakpoints for mobile/tablet
 
-## 4) CSS enhancements
-- [x] Add new CSS classes for accommodation details and icon rows
-- [x] Keep existing `.card` look consistent; extend without breaking
+## Section Reorder
+- [x] Moved Restaurant & Café to right after About section
+- [x] Moved 5-image Why Choose section to below Restaurant & Café
 
+## Accommodation Section on Home
+- [x] Replaced Restaurant & Café section with Accommodation section (Standard Queen, Premium Queen, Villa)
 
-## 5) Testing checklist
-- [ ] Confirm `index.php` shows correct 3 accommodation cards
-- [ ] Confirm `accommodation.php` shows correct 5 accommodation cards
-- [ ] Verify responsive rendering (desktop/tablet/mobile)
-- [ ] Verify navbar interactions still work
+## Elegant Accommodation Intro + Trust/Ratings Bar
+- [x] php/index.php: PHP arrays for intro content + rating badges, rendered with foreach
+- [x] css/accommodation.css: Asymmetric dual-image grid + editorial typography + ratings bar
+- [x] Responsive: stacks vertically on tablet/mobile, ratings stack to column
 
+## Bug Fix
+- [x] Why Choose 5-image section: restores full width by properly closing the accommodation section (was nested inside `.container accommodation-page`)
+
+## Style Adjustments
+- [x] Accommodation background changed to white
+- [x] Intro images no longer rounded (border-radius: 0)
+- [x] Both intro images same height/width (380px), staggered vertically (left lower, right higher)
