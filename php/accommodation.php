@@ -45,7 +45,7 @@
       <!-- Standard Queen -->
       <div class="accommodation-room">
         <div class="room-image">
-          <img src="../images/rooms/IMG_0956.svg" alt="Standard Queen">
+          <img src="../images/rooms/StandardQueen.webp" alt="Standard Queen">
         </div>
 
         <div class="room-info">
@@ -63,7 +63,7 @@
       <!-- Triple Room -->
       <div class="accommodation-room">
         <div class="room-image">
-          <img src="../images/rooms/IMG_0980.svg" alt="Triple Room">
+          <img src="../images/rooms/TripleRoom.webp" alt="Triple Room">
         </div>
 
         <div class="room-info">
@@ -78,28 +78,10 @@
         </div>
       </div>
 
-      <!-- Premium Queen -->
-      <div class="accommodation-room">
-        <div class="room-image">
-          <img src="../images/rooms/IMG_0988.svg" alt="Premium Queen">
-        </div>
-
-        <div class="room-info">
-          <h3>Premium Queen</h3>
-
-          <p class="accommodation-desc">
-            Enjoy added comfort and a refreshing atmosphere with a private
-            terrace, ideal for a peaceful retreat.
-          </p>
-
-          <a href="#" class="view-btn">Read More</a>
-        </div>
-      </div>
-
       <!-- Quad Room -->
       <div class="accommodation-room">
         <div class="room-image">
-          <img src="../images/rooms/IMG_0996.svg" alt="Quad Room">
+          <img src="../images/rooms/QuadRoom.webp" alt="Quad Room">
         </div>
 
         <div class="room-info">
@@ -117,7 +99,7 @@
       <!-- Villa -->
       <div class="accommodation-room">
         <div class="room-image">
-          <img src="../images/rooms/IMG_1007.svg" alt="Villa">
+          <img src="../images/rooms/Villa.webp" alt="Villa">
         </div>
 
         <div class="room-info">
