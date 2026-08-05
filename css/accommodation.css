@@ -1,282 +1,290 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap");
 
 /* =========================
    ACCOMMODATION INTRO (ELEGANT)
 ========================= */
 
-.accomm-intro{
-  display:grid;
-  grid-template-columns:1.1fr 1fr;
-  gap:70px;
-  align-items:center;
-  background:#fff6dc;
-  padding:70px;
-  border-radius:0;
-  margin-bottom:60px;
+/* Home page accommodation section white background */
+.home-accomm-section {
+  background: #ffffff;
+}
+
+.accomm-intro {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  background: #ffffff;
+  padding: 70px;
+  border-radius: 0;
+  margin-bottom: 60px;
 }
 
 /* Left: asymmetric dual-image collage */
-.accomm-intro-images{
-  position:relative;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:24px;
-  align-items:start;
+.accomm-intro-images {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
 }
 
-.intro-img{
-  overflow:hidden;
-  border-radius:0;
-  box-shadow:0 18px 45px rgba(36,54,40,.15);
+.intro-img {
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: 0 18px 45px rgba(36, 54, 40, 0.15);
 }
 
-.intro-img img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transition:transform .6s ease;
+.intro-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
 }
 
-.intro-img:hover img{
-  transform:scale(1.03);
+.intro-img:hover img {
+  transform: scale(1.03);
 }
 
 .intro-img-left,
-.intro-img-right{
-  height:380px;
+.intro-img-right {
+  height: 380px;
 }
 
-.intro-img-left{
-  transform:translateY(24px);
+.intro-img-left {
+  transform: translateY(24px);
 }
 
-.intro-img-right{
-  transform:translateY(-24px);
+.intro-img-right {
+  transform: translateY(-24px);
 }
 
 /* Right: editorial typography */
-.accomm-intro-text{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  text-align:left;
+.accomm-intro-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
 
-.intro-subtitle{
-  font-size:.8rem;
-  letter-spacing:.15em;
-  text-transform:uppercase;
-  color:#C49A70;
-  font-weight:600;
-  margin-bottom:18px;
+.intro-subtitle {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #c49a70;
+  font-weight: 600;
+  margin-bottom: 18px;
 }
 
-.intro-title{
-  font-family:'Cormorant Garamond', 'The Seasons', serif;
-  font-size:clamp(2rem, 3.2vw, 3rem);
-  color:#234B3D;
-  line-height:1.15;
-  margin-bottom:22px;
+.intro-title {
+  font-family: "Cormorant Garamond", "The Seasons", serif;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  color: #234b3d;
+  line-height: 1.15;
+  margin-bottom: 22px;
 }
 
-.intro-body{
-  color:#666666;
-  line-height:1.7;
-  font-size:1.02rem;
-  margin-bottom:34px;
-  max-width:520px;
+.intro-body {
+  color: #666666;
+  line-height: 1.7;
+  font-size: 1.02rem;
+  margin-bottom: 34px;
+  max-width: 520px;
 }
 
-.intro-btn{
-  display:inline-block;
-  background-color:#C49A70;
-  color:#fff;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  font-size:.85rem;
-  font-weight:600;
-  padding:15px 34px;
-  border-radius:50px;
-  text-decoration:none;
-  transition:background .3s ease, filter .3s ease, transform .3s ease;
+.intro-btn {
+  display: inline-block;
+  background-color: #c49a70;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 15px 34px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    filter 0.3s ease,
+    transform 0.3s ease;
 }
 
-.intro-btn:hover{
-  background:#b3875c;
-  filter:brightness(1.05);
-  transform:translateY(-2px);
+.intro-btn:hover {
+  background: #b3875c;
+  filter: brightness(1.05);
+  transform: translateY(-2px);
 }
 
 /* Bottom: trust / ratings bar */
-.accomm-ratings{
-  display:flex;
-  justify-content:space-around;
-  gap:30px;
-  padding-top:40px;
-  border-top:1px solid rgba(36,54,40,.14);
-  margin-bottom:70px;
+.accomm-ratings {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(36, 54, 40, 0.14);
+  margin-bottom: 70px;
 }
 
-.rating-badge{
-  display:flex;
-  align-items:center;
-  gap:16px;
-  background:#fff;
-  border:1px solid #eee;
-  border-radius:18px;
-  padding:22px 26px;
-  box-shadow:0 8px 24px rgba(36,54,40,.06);
-  flex:1;
-  max-width:340px;
-  transition:transform .3s ease, box-shadow .3s ease;
+.rating-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 18px;
+  padding: 22px 26px;
+  box-shadow: 0 8px 24px rgba(36, 54, 40, 0.06);
+  flex: 1;
+  max-width: 340px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.rating-badge:hover{
-  transform:translateY(-4px);
-  box-shadow:0 14px 34px rgba(36,54,40,.12);
+.rating-badge:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(36, 54, 40, 0.12);
 }
 
-.rating-logo{
-  flex-shrink:0;
-  width:58px;
-  height:58px;
-  border-radius:14px;
-  background:#f2f0ec;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:'The Seasons', serif;
-  font-size:1.5rem;
-  font-weight:700;
-  color:#234B3D;
+.rating-logo {
+  flex-shrink: 0;
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: #f2f0ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "The Seasons", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #234b3d;
 }
 
-.rating-info{
-  display:flex;
-  flex-direction:column;
-  gap:3px;
+.rating-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
-.rating-top{
-  display:flex;
-  align-items:center;
-  gap:7px;
+.rating-top {
+  display: flex;
+  align-items: center;
+  gap: 7px;
 }
 
-.rating-num{
-  font-weight:700;
-  font-size:1.15rem;
-  color:#234B3D;
+.rating-num {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #234b3d;
 }
 
-.rating-star{
-  color:#C49A70;
-  font-size:1rem;
+.rating-star {
+  color: #c49a70;
+  font-size: 1rem;
 }
 
-.rating-sentiment{
-  font-size:.85rem;
-  font-weight:600;
+.rating-sentiment {
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
-.rating-platform{
-  font-size:.92rem;
-  font-weight:600;
-  color:#234B3D;
+.rating-platform {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #234b3d;
 }
 
-.rating-reviews{
-  font-size:.82rem;
-  color:#999;
+.rating-reviews {
+  font-size: 0.82rem;
+  color: #999;
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
 
-@media (max-width: 1024px){
-  .accomm-intro{
-    grid-template-columns:1fr;
-    gap:50px;
-    padding:40px;
+@media (max-width: 1024px) {
+  .accomm-intro {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 40px;
   }
 
-  .accomm-intro-images{
-    max-width:560px;
+  .accomm-intro-images {
+    max-width: 560px;
   }
 
-  .accomm-ratings{
-    flex-wrap:wrap;
+  .accomm-ratings {
+    flex-wrap: wrap;
   }
 
-  .rating-badge{
-    flex:1 1 220px;
-    max-width:none;
+  .rating-badge {
+    flex: 1 1 220px;
+    max-width: none;
   }
 }
 
-@media (max-width: 768px){
-  .accomm-intro{
-    padding:30px 22px;
-    gap:40px;
+@media (max-width: 768px) {
+  .accomm-intro {
+    padding: 30px 22px;
+    gap: 40px;
   }
 
-  .accomm-intro-images{
-    grid-template-columns:1fr;
-    gap:18px;
+  .accomm-intro-images {
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .intro-img-left,
-  .intro-img-right{
-    height:240px;
-    transform:none;
-    width:100%;
+  .intro-img-right {
+    height: 240px;
+    transform: none;
+    width: 100%;
   }
 
-  .accomm-intro-text{
-    align-items:center;
-    text-align:center;
+  .accomm-intro-text {
+    align-items: center;
+    text-align: center;
   }
 
-  .intro-body{
-    text-align:center;
+  .intro-body {
+    text-align: center;
   }
 
-  .accomm-ratings{
-    flex-direction:column;
-    align-items:stretch;
-    gap:16px;
+  .accomm-ratings {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
   }
 
-  .rating-badge{
-    max-width:none;
-    width:100%;
+  .rating-badge {
+    max-width: none;
+    width: 100%;
   }
 }
 
 .hero.accommodation-hero {
-  min-height: 50vh; 
+  min-height: 50vh;
 }
 
 /* White background for the accommodation section on home page */
 
-
-.accommodation-list{
+.accommodation-list {
   display: flex;
   flex-direction: column;
   gap: 30px;
   margin-top: 50px;
 }
 
-.accommodation-room{
+.accommodation-room {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 350px;
   overflow: hidden;
-  
 }
-.accommodation-intro{
+.accommodation-intro {
   max-width: 850px;
   margin: 0 auto 50px;
   text-align: center;
@@ -285,20 +293,20 @@
   font-size: 1.05rem;
 }
 
-.room-image{
+.room-image {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-.room-image img{
+.room-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.room-info{
+.room-info {
   padding: 35px;
   display: flex;
   flex-direction: column;
@@ -306,129 +314,127 @@
   text-align: left;
 }
 
-.room-info h3{
-  font-family: 'The Seasons', serif;
+.room-info h3 {
+  font-family: "The Seasons", serif;
   font-size: 1.6rem;
   color: #234b3d;
   margin-bottom: 18px;
 }
 
-.accommodation-desc{
+.accommodation-desc {
   color: #666;
   line-height: 1.8;
   margin-bottom: 35px;
 }
 
-.room-bottom{
+.room-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.room-price{
+.room-price {
   font-size: 1.8rem;
   font-weight: 700;
-  font-family: 'The Seasons', serif;
+  font-family: "The Seasons", serif;
   color: #234b3d;
 }
 
-.room-price span{
+.room-price span {
   font-size: 0.9rem;
   color: #777;
   font-weight: 400;
 }
 
-.view-btn{
-    display:inline-flex;
-    align-items:center;
-justify-content:center;
-    padding:8px 14px;
-    font-family:'The Seasons', serif;
-    color:#ffffff;
-    background:#3a5836;
-    border:2px solid #3a5836;
-    border-radius:700px;
-    text-decoration:none;
-    font-size:0.8rem;
-    letter-spacing:0.5px;
-    line-height:1;
-    white-space:nowrap;
+.view-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  font-family: "The Seasons", serif;
+  color: #ffffff;
+  background: #3a5836;
+  border: 2px solid #3a5836;
+  border-radius: 700px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .view-btn:hover,
-.view-btn:focus-visible{
-  background:#2f4730;
-  color:#f8fff5;
-  transform:translateY(-1px);
-  outline:none;
+.view-btn:focus-visible {
+  background: #2f4730;
+  color: #f8fff5;
+  transform: translateY(-1px);
+  outline: none;
 }
 
-.view-btn:focus-visible{
-  box-shadow:0 0 0 4px rgba(58,88,54,.18);
+.view-btn:focus-visible {
+  box-shadow: 0 0 0 4px rgba(58, 88, 54, 0.18);
 }
 
 /* Alternate image position */
-.accommodation-room:nth-child(even) .room-image{
+.accommodation-room:nth-child(even) .room-image {
   order: 2;
 }
 
-.accommodation-room:nth-child(even) .room-info{
+.accommodation-room:nth-child(even) .room-info {
   order: 1;
 }
 
 /* ================= TABLET ================= */
-@media (max-width: 992px){
-
-  .accommodation-room{
+@media (max-width: 992px) {
+  .accommodation-room {
     grid-template-columns: 1fr;
     height: auto;
   }
 
-  .room-image{
+  .room-image {
     height: 260px;
   }
 
-  .room-info{
+  .room-info {
     padding: 30px;
   }
 
   .accommodation-room:nth-child(even) .room-image,
-  .accommodation-room:nth-child(even) .room-info{
+  .accommodation-room:nth-child(even) .room-info {
     order: unset;
   }
 }
 
-@media (max-width: 768px){
-
-  .room-image{
+@media (max-width: 768px) {
+  .room-image {
     height: 220px;
   }
 
-  .room-info{
+  .room-info {
     padding: 25px;
   }
 
-  .room-info h3{
+  .room-info h3 {
     font-size: 1.4rem;
   }
 
-  .room-bottom{
+  .room-bottom {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
   }
 
-  .room-price{
+  .room-price {
     font-size: 1.5rem;
   }
 
-  .view-btn{
+  .view-btn {
     width: 100%;
     text-align: center;
   }
   @media (max-width: 768px) {
-  .hero.accommodation-hero {
-    min-height: 50vh; 
+    .hero.accommodation-hero {
+      min-height: 50vh;
+    }
   }
-}
 }
