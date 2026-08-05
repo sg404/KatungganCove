@@ -50,8 +50,73 @@
 </div>
 </section>
 
+<!-- ================= WHY CHOOSE (IMAGES ABOVE ACCOMMODATION INTRO) ================= -->
+<?php
+  $features = [
+[
+      'title'       => 'Quiet Luxury',
+      'description' => 'Unwind in refined, thoughtfully designed spaces that prioritize calm, comfort, and understated elegance.',
+      'icon'        => 'leaf',
+      'image_url'   => '../images/image1.webp',
+      'link'        => '#',
+    ],
+    [
+      'title'       => 'Sustainable Living',
+      'description' => 'Embrace eco-conscious stays rooted in nature, from lush mangroves to responsible, low-impact hospitality.',
+      'icon'        => 'sprout',
+      'image_url'   => '../images/image2.webp',
+      'link'        => '#',
+    ],
+    [
+      'title'       => 'Island Experiences',
+      'description' => 'Discover authentic island adventures, breathtaking sunsets, and memories that stay with you long after.',
+      'icon'        => 'waves',
+      'image_url'   => '../images/image3.webp',
+      'link'        => '#',
+    ],
+    [
+      'title'       => 'Private Beaches',
+      'description' => 'Step onto serene, secluded shores and feel the soft sand between your toes in total peace.',
+      'icon'        => 'leaf',
+      'image_url'   => '../images/image4.webp',
+      'link'        => '#',
+    ],
+    [
+      'title'       => 'Sunset Views',
+      'description' => 'Watch golden skies melt over the cove—a daily show of color and calm you will never forget.',
+      'icon'        => 'waves',
+      'image_url'   => '../images/image5.webp',
+      'link'        => '#',
+    ],
+  ];
+?>
+
+<section class="why-choose" id="why-choose">
+  <div class="why-choose-inner">
+
+<!-- TOP: IMAGES (duplicated twice for seamless one-way marquee) -->
+    <div class="why-accordion">
+      <div class="why-track">
+      <?php for ($set = 0; $set < 2; $set++): ?>
+        <?php foreach ($features as $i => $feature): ?>
+          <div class="why-panel" data-feature="<?php echo htmlspecialchars($feature['title']); ?>">
+            <img src="<?php echo htmlspecialchars($feature['image_url']); ?>" alt="<?php echo htmlspecialchars($feature['title']); ?>" loading="lazy">
+            <div class="why-panel-overlay"></div>
+            <div class="why-panel-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8L12 2z"/></svg>
+              <span><?php echo htmlspecialchars($feature['title']); ?></span>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      <?php endfor; ?>
+      </div>
+    </div>
+
+</div>
+</section>
+
 <!-- ================= ACCOMMODATION ================= -->
-<section class="section bg-light">
+<section class="section bg-light home-accomm-section">
   <div class="container accommodation-page">
 
     <?php
@@ -125,67 +190,6 @@
     </div>
 
   </div>
-</section>
-
-<!-- ================= WHY CHOOSE ================= -->
-<?php
-  $features = [
-[
-      'title'       => 'Quiet Luxury',
-      'description' => 'Unwind in refined, thoughtfully designed spaces that prioritize calm, comfort, and understated elegance.',
-      'icon'        => 'leaf',
-      'image_url'   => '../images/image1.webp',
-      'link'        => '#',
-    ],
-    [
-      'title'       => 'Sustainable Living',
-      'description' => 'Embrace eco-conscious stays rooted in nature, from lush mangroves to responsible, low-impact hospitality.',
-      'icon'        => 'sprout',
-      'image_url'   => '../images/image2.webp',
-      'link'        => '#',
-    ],
-    [
-      'title'       => 'Island Experiences',
-      'description' => 'Discover authentic island adventures, breathtaking sunsets, and memories that stay with you long after.',
-      'icon'        => 'waves',
-      'image_url'   => '../images/image3.webp',
-      'link'        => '#',
-    ],
-    [
-      'title'       => 'Private Beaches',
-      'description' => 'Step onto serene, secluded shores and feel the soft sand between your toes in total peace.',
-      'icon'        => 'leaf',
-      'image_url'   => '../images/image4.webp',
-      'link'        => '#',
-    ],
-    [
-      'title'       => 'Sunset Views',
-      'description' => 'Watch golden skies melt over the cove—a daily show of color and calm you will never forget.',
-      'icon'        => 'waves',
-      'image_url'   => '../images/image5.webp',
-      'link'        => '#',
-    ],
-  ];
-?>
-
-<section class="why-choose" id="why-choose">
-  <div class="why-choose-inner">
-
-    <!-- TOP: IMAGES -->
-    <div class="why-accordion">
-      <?php foreach ($features as $i => $feature): ?>
-        <div class="why-panel" data-feature="<?php echo htmlspecialchars($feature['title']); ?>">
-          <img src="<?php echo htmlspecialchars($feature['image_url']); ?>" alt="<?php echo htmlspecialchars($feature['title']); ?>" loading="lazy">
-          <div class="why-panel-overlay"></div>
-          <div class="why-panel-label">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8L12 2z"/></svg>
-            <span><?php echo htmlspecialchars($feature['title']); ?></span>
-          </div>
-        </div>
-      <?php endforeach; ?>
-    </div>
-
-</div>
 </section>
 
 <!-- ================= BLANK SPACE ================= -->

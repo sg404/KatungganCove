@@ -71,7 +71,7 @@
     <div class="footer-bottom">
       <div class="footer-bottom-left">
         <div class="footer-bottom-brand">
-<img src="../images/logo3-converted.svg" alt="Katunggan logo3" style="width:100px;height:100px;margin:0 auto 10px;display:block;object-fit:contain;" />
+<img src="../images/logo3-converted.svg" alt="Katunggan logo3" style="width:50px;height:50px;margin:0 auto 10px;display:block;object-fit:contain;" />
           <div style="margin-top:4px;">Katunggan Cove Resort</div>
         </div>
         <div class="footer-bottom-copy">&copy; 2026 Katunggan Cove Resort. All rights reserved.</div>
