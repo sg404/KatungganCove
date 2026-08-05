@@ -20,7 +20,7 @@
 <section class="hero accommodation-hero">
 
   <div class="slides">
-    <img src="../images/image3.webp" class="slide active" alt="Katunggan Cove Resort Pool">
+    <img src="../images/rooms/QuadRoom.webp" class="slide active" alt="Katunggan Cove Resort Room">
   </div>
 
   <div class="overlay"></div>
@@ -51,12 +51,12 @@
         <div class="room-info">
           <h3>Standard Queen</h3>
 
-          <p class="accommodation-desc">
+<p class="accommodation-desc">
             A cozy and comfortable room designed for couples or solo travelers
             seeking a relaxing getaway.
           </p>
 
-          <a href="#" class="view-btn">Read More</a>
+          <a href="standard-queen.php" class="view-btn">Read More</a>
         </div>
       </div>
 

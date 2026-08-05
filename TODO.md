@@ -44,3 +44,17 @@
 - [x] Accommodation background changed to white
 - [x] Intro images no longer rounded (border-radius: 0)
 - [x] Both intro images same height/width (380px), staggered vertically (left lower, right higher)
+
+## Standard Queen Room Details Page
+- [x] php/standard-queen.php: New single-page room details (hero banner, primary section, about, amenities)
+- [x] css/room-details.css: High-fidelity off-white layout, back button, responsive
+- [x] includes/icons.php: Shared inline SVG icon set (features + amenities)
+- [x] php/accommodation.php: Pointed Standard Queen "Read More" to standard-queen.php
+- [x] Added "Back to Rooms" button → accommodation.php (no reservation form / gallery, bookings via Booking.com)
+- [x] Fixed feature icons showing raw PHP (rewrote icons.php to use render_icon() function)
+- [x] Fixed amenity icons to use render_icon()
+- [x] Added right-side room image in primary section (2-column layout)
+- [x] Shortened About-section portrait image (620px -> 480px)
+- [x] Added square "Book A Stay" button below the room info (.rd-btn-square, border-radius: 0)
+- [x] Removed "Gym" and "Laundry Service" from amenities
+- [x] Fixed "More Views of the Room" broken images (referenced 3.webp/4.webp but actual files are 3.jpg/4.jpg)
