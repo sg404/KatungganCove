@@ -230,7 +230,7 @@ img {
   font-family: "The Seasons", serif;
   background:
     linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.69)),
-    url("../images/hero-bg.svg") center/cover no-repeat;
+    url("../images/hero-bg.webp") center/cover no-repeat;
 }
 
 /* About section fixed height */

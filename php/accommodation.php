@@ -31,10 +31,6 @@
 <section class="section bg-light" style="padding-top:80px;">
   <div class="container accommodation-page">
 
-    <div class="section-title">
-      <h2>Accommodations</h2>
-    </div>
-
     <p class="accommodation-intro">
       Discover comfortable and thoughtfully designed rooms perfect for couples,
       families, and groups looking for a relaxing resort stay.
