@@ -748,9 +748,9 @@ img {
   background:
     linear-gradient(
       180deg,
-      rgba(9, 40, 22, 0.45) 0%,
-      rgba(12, 52, 28, 0.55) 45%,
-      rgba(6, 30, 16, 0.7) 100%
+      rgba(9, 40, 22, 0.72) 0%,
+      rgba(12, 52, 28, 0.82) 45%,
+      rgba(6, 30, 16, 0.92) 100%
     ),
     url("../images/mangrove.webp") center/cover no-repeat;
   background-color: #1b3b2b;
