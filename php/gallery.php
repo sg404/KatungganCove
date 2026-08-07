@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery | Katunggan Cove Resort</title>
   <link rel="icon" href="../images/logo3.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/header-footer.css">
+<link rel="stylesheet" href="../css/header-footer.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/gallery.css">
+  <link rel="stylesheet" href="../css/footer.css">
 
   <?php include '../includes/fonts.php'; ?>
 </head>

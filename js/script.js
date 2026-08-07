@@ -18,7 +18,7 @@
         }
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.2 },
   );
 
   observer.observe(aboutContent);
@@ -63,17 +63,17 @@ if (menuBtn && siteMenu) {
   });
 
   // keyboard support for Enter / Space
-  menuBtn.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
+  menuBtn.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
-      const isOpen = navbar && navbar.classList.contains('menu-open');
+      const isOpen = navbar && navbar.classList.contains("menu-open");
       setMenuOpen(!isOpen);
     }
   });
 
   // Close on link click (use delegation)
-  siteMenu.addEventListener('click', (e) => {
-    const link = e.target.closest('[data-nav-link]');
+  siteMenu.addEventListener("click", (e) => {
+    const link = e.target.closest("[data-nav-link]");
     if (!link) return;
     // allow the navigation to happen, but close the menu for UX
     setMenuOpen(false);
@@ -95,52 +95,54 @@ if (menuBtn && siteMenu) {
 // Active nav link logic (runs regardless of mobile menu presence)
 // Simplified, robust active link detection
 function updateActiveNavLinks() {
-  const anchors = Array.from(document.querySelectorAll('#site-menu a[data-nav-link]'));
+  const anchors = Array.from(
+    document.querySelectorAll("#site-menu a[data-nav-link]"),
+  );
   if (!anchors.length) return;
 
   // Determine current file name (use index.php for directory roots)
-  let currentFile = window.location.pathname.split('/').pop() || '';
-  if (currentFile === '') currentFile = 'index.php';
+  let currentFile = window.location.pathname.split("/").pop() || "";
+  if (currentFile === "") currentFile = "index.php";
 
   // Clear previous active states
-  anchors.forEach(a => a.classList.remove('active'));
+  anchors.forEach((a) => a.classList.remove("active"));
 
   // Find first matching anchor by resolved pathname or filename
   for (const a of anchors) {
-    const raw = (a.getAttribute('href') || '').trim();
+    const raw = (a.getAttribute("href") || "").trim();
 
     // skip placeholders
-    if (!raw || raw === '#') continue;
+    if (!raw || raw === "#") continue;
 
     // same-page hash link: only match if hash equals
-    if (raw.startsWith('#')) {
-      if (raw === window.location.hash && window.location.hash !== '') {
-        a.classList.add('active');
+    if (raw.startsWith("#")) {
+      if (raw === window.location.hash && window.location.hash !== "") {
+        a.classList.add("active");
         return;
       }
       continue;
     }
 
-    let hrefFile = '';
+    let hrefFile = "";
     try {
       const resolved = new URL(raw, window.location.href);
-      hrefFile = resolved.pathname.split('/').pop() || '';
+      hrefFile = resolved.pathname.split("/").pop() || "";
       // treat directory paths as index.php
-      if (hrefFile === '') hrefFile = 'index.php';
+      if (hrefFile === "") hrefFile = "index.php";
     } catch (e) {
       // fallback: use raw filename
-      hrefFile = raw.split('/').pop() || '';
+      hrefFile = raw.split("/").pop() || "";
     }
 
     if (hrefFile === currentFile) {
-      a.classList.add('active');
+      a.classList.add("active");
     }
   }
 }
 
 updateActiveNavLinks();
-window.addEventListener('popstate', updateActiveNavLinks);
-window.addEventListener('hashchange', updateActiveNavLinks);
+window.addEventListener("popstate", updateActiveNavLinks);
+window.addEventListener("hashchange", updateActiveNavLinks);
 
 // Automatic slider
 const slides = document.querySelectorAll(".slide");
@@ -149,8 +151,8 @@ const dots = document.querySelectorAll(".dot");
 let current = 0;
 
 function showSlide(index) {
-  slides.forEach(slide => slide.classList.remove("active"));
-  dots.forEach(dot => dot.classList.remove("active-dot"));
+  slides.forEach((slide) => slide.classList.remove("active"));
+  dots.forEach((dot) => dot.classList.remove("active-dot"));
 
   if (slides[index]) slides[index].classList.add("active");
   if (dots[index]) dots[index].classList.add("active-dot");
@@ -172,7 +174,8 @@ const galleryPrev = document.querySelector(".gallery-prev");
 const galleryNext = document.querySelector(".gallery-next");
 
 if (gallery && galleryTrack && galleryPrev && galleryNext) {
-  const cards = () => Array.from(galleryTrack.querySelectorAll(".gallery-card"));
+  const cards = () =>
+    Array.from(galleryTrack.querySelectorAll(".gallery-card"));
   const getCardWidth = () => {
     const first = galleryTrack.querySelector(".gallery-card");
     if (!first) return 0;
@@ -208,9 +211,13 @@ if (gallery && galleryTrack && galleryPrev && galleryNext) {
 
   // swipe support
   let startX = null;
-  gallery.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
-  }, { passive: true });
+  gallery.addEventListener(
+    "touchstart",
+    (e) => {
+      startX = e.touches[0].clientX;
+    },
+    { passive: true },
+  );
 
   gallery.addEventListener("touchend", (e) => {
     if (startX == null) return;
@@ -222,18 +229,19 @@ if (gallery && galleryTrack && galleryPrev && galleryNext) {
     startX = null;
   });
 
-// keep in sync on resize
+  // keep in sync on resize
   window.addEventListener("resize", update);
   update();
 }
 
-// Testimonials auto-scroll carousel
+// Testimonials carousel with side arrows
 (function () {
   const track = document.querySelector(".testimonial-track");
   if (!track) return;
 
-  const viewport = document.querySelector(".testimonial-viewport");
   const cards = () => Array.from(track.querySelectorAll(".testimonial-card"));
+  const prevBtn = document.querySelector(".testimonial-prev");
+  const nextBtn = document.querySelector(".testimonial-next");
   let index = 0;
 
   function getCardWidth() {
@@ -244,27 +252,54 @@ if (gallery && galleryTrack && galleryPrev && galleryNext) {
     return first.getBoundingClientRect().width + marginRight + 30; // include gap
   }
 
+  function visibleCount() {
+    if (window.innerWidth <= 768) return 1;
+    if (window.innerWidth <= 1024) return 2;
+    return 3;
+  }
+
   function updateTransform() {
     const list = cards();
     if (!list.length) return;
     const cardWidth = getCardWidth();
+    const visible = visibleCount();
+    const maxIndex = Math.max(0, list.length - visible);
+    index = Math.max(0, Math.min(maxIndex, index));
     track.style.transform = `translateX(${-index * cardWidth}px)`;
   }
 
   function next() {
     const list = cards();
     if (!list.length) return;
-    let visible = 3;
-    if (window.innerWidth <= 768) visible = 1;
-    else if (window.innerWidth <= 1024) visible = 2;
-
-    index++;
-    if (index > list.length - visible) index = 0;
+    const visible = visibleCount();
+    const maxIndex = Math.max(0, list.length - visible);
+    index = index >= maxIndex ? 0 : index + 1;
     updateTransform();
   }
 
+  function prev() {
+    const list = cards();
+    if (!list.length) return;
+    const visible = visibleCount();
+    const maxIndex = Math.max(0, list.length - visible);
+    index = index <= 0 ? maxIndex : index - 1;
+    updateTransform();
+  }
+
+  if (nextBtn) nextBtn.addEventListener("click", next);
+  if (prevBtn) prevBtn.addEventListener("click", prev);
+
   // Auto scroll every 4 seconds
-  setInterval(next, 4000);
+  let auto = setInterval(next, 4000);
+
+  // Pause auto-scroll while hovering the testimonials section
+  const section = document.querySelector(".testimonials");
+  if (section) {
+    section.addEventListener("mouseenter", () => clearInterval(auto));
+    section.addEventListener("mouseleave", () => {
+      auto = setInterval(next, 4000);
+    });
+  }
 
   // Keep track width in sync when needed
   window.addEventListener("resize", () => {
@@ -294,7 +329,7 @@ if (gallery && galleryTrack && galleryPrev && galleryNext) {
         }
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.2 },
   );
 
   panels.forEach((panel) => {
