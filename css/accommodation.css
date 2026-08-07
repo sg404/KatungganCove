@@ -4,9 +4,14 @@
    ACCOMMODATION INTRO (ELEGANT)
 ========================= */
 
-/* Home page accommodation section white background */
+/* Home page accommodation section with background image */
 .home-accomm-section {
-  background: #ffffff;
+  background:
+    linear-gradient(rgba(255, 246, 220, 0.85), rgba(255, 246, 220, 0.85)),
+    url("../images/accommodation-bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .accomm-intro {
@@ -14,8 +19,8 @@
   grid-template-columns: 1.1fr 1fr;
   gap: 70px;
   align-items: center;
-  background: #ffffff;
-  padding: 70px;
+  background: #fff6dc;
+  padding: 40px;
   border-radius: 0;
   margin-bottom: 60px;
 }
@@ -49,7 +54,7 @@
 
 .intro-img-left,
 .intro-img-right {
-  height: 380px;
+  height: 360px;
 }
 
 .intro-img-left {

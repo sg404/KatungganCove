@@ -146,6 +146,14 @@ nav {
   letter-spacing: 1px;
 }
 
+.navbar .navbar-book-btn {
+  flex-shrink: 0;
+  margin-left: 32px;
+  background: #3a5836;
+  color: #fff;
+  border-radius: 6px;
+}
+
 .btn-outline {
   display: inline-block;
   border: 2px solid #fff;
@@ -379,6 +387,15 @@ footer a:hover {
 
 .footer-grid-top {
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Contact on the left, map/location pushed to the right */
+.footer-grid-top .footer-about {
+  grid-column: 1 / 2;
+}
+
+.footer-grid-top .footer-location {
+  grid-column: 3 / 4;
 }
 
 .footer-title-center,

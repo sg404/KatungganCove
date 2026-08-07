@@ -19,8 +19,9 @@
           <li><a href="../php/accommodation.php" data-nav-link>Accommodation</a></li>
           <li><a href="#" data-nav-link>Experiences</a></li>
 <li><a href="../php/gallery.php" data-nav-link>Gallery</a></li>
-          <li><a href="#" data-nav-link>Contact</a></li>
+          <li><a href="../php/accommodation.php" data-nav-link>Contact</a></li>
         </ul>
+        <a href="../php/accommodation.php" class="btn navbar-book-btn">Book Now</a>
       </nav>
 
       <button class="menu-btn" type="button" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">

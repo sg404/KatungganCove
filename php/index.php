@@ -6,9 +6,10 @@
   <title>Katunggan Cove Resort</title>
   <link rel="icon" href="../images/logo3.svg" type="image/svg+xml">
 
-  <link rel="stylesheet" href="../css/header-footer.css">
+<link rel="stylesheet" href="../css/header-footer.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/accommodation.css">
+  <link rel="stylesheet" href="../css/footer.css">
 
   <?php include '../includes/fonts.php'; ?>
 </head>
@@ -103,7 +104,6 @@
             <img src="<?php echo htmlspecialchars($feature['image_url']); ?>" alt="<?php echo htmlspecialchars($feature['title']); ?>" loading="lazy">
             <div class="why-panel-overlay"></div>
             <div class="why-panel-label">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8L12 2z"/></svg>
               <span><?php echo htmlspecialchars($feature['title']); ?></span>
             </div>
           </div>
@@ -121,10 +121,9 @@
 
     <?php
       // Accommodation intro section content
-      $accommIntro = [
-        'subtitle'    => 'Welcome to Katunggan Cove',
+$accommIntro = [
         'title'       => 'Luxury hotel in the heart of nature',
-        'body'        => 'Nestled within lush mangroves and the serene shores of Guimaras, Katunggan Cove Resort blends quiet luxury with sustainable, intimate hospitality. Every room and suite is thoughtfully designed to bring you closer to nature without compromising comfort, privacy, or refined detail.',
+        'body'        => 'Nestled within lush mangroves and the serene shores of Guimaras, Katunggan Cove Resort blends quiet luxury with sustainable, intimate hospitality.',
         'button_text' => 'Read More',
         'button_link' => 'accommodation.php',
         'images'      => [
@@ -173,8 +172,7 @@
         </div>
       </div>
 
-<div class="accomm-intro-text">
-        <p class="intro-subtitle"><?php echo htmlspecialchars($accommIntro['subtitle']); ?></p>
+      <div class="accomm-intro-text">
         <h2 class="intro-title"><?php echo htmlspecialchars($accommIntro['title']); ?></h2>
         <p class="intro-body"><?php echo htmlspecialchars($accommIntro['body']); ?></p>
         <a href="<?php echo htmlspecialchars($accommIntro['button_link']); ?>" class="intro-btn"><?php echo htmlspecialchars($accommIntro['button_text']); ?> &rarr;</a>
@@ -192,8 +190,27 @@
   </div>
 </section>
 
-<!-- ================= BLANK SPACE ================= -->
-<section class="why-blank"></section>
+<!-- ================= CTA ================= -->
+<section class="cta">
+
+  <div class="container">
+
+    <h2>Ready for Your Island Getaway?</h2>
+
+    <p class="cta-subtext">
+      Book your stay today and experience nature, relaxation, and adventure.
+    </p>
+
+    <br>
+
+<a href="accommodation.php" class="cta-btn">
+      Book Your Stay
+      <span class="cta-arrow" aria-hidden="true">&#10095;</span>
+    </a>
+
+  </div>
+
+</section>
 
 <!-- ================= TESTIMONIALS ================= -->
 <section class="section testimonials">
@@ -204,80 +221,81 @@
       <h2>What Our Guests Say</h2>
     </div>
 
-    <div class="testimonial-viewport">
+<div class="testimonial-viewport">
       <div class="testimonial-track">
 
         <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
           <p class="testimonial-text">"Katunggan Cove is pure paradise. The quiet luxury and breathtaking views made our escape unforgettable. We can't wait to come back!"</p>
-          <div class="testimonial-author">
+          <div class="testimonial-profile">
+            <span class="testimonial-avatar" aria-hidden="true">M</span>
             <span class="testimonial-name">Maria Santos</span>
-            <span class="testimonial-role">Vacationer</span>
           </div>
         </div>
 
         <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
           <p class="testimonial-text">"The staff were so warm and attentive. Every detail felt intentional—from the sustainably designed rooms to the delicious local food."</p>
-          <div class="testimonial-author">
-            <span class="testimonial-name">James Cruz</span>
-            <span class="testimonial-role">Couple Getaway</span>
+          <div class="testimonial-profile">
+            <span class="testimonial-avatar" aria-hidden="true">J</span>
+            <span class="testimonial-name">James Dela Cruz</span>
           </div>
         </div>
 
         <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
           <p class="testimonial-text">"We booked the villa for our family and it exceeded all expectations. Spacious, private, and surrounded by nature. Truly a hidden gem."</p>
-          <div class="testimonial-author">
-            <span class="testimonial-name">Alyssa Reyes</span>
-            <span class="testimonial-role">Family Trip</span>
+          <div class="testimonial-profile">
+            <span class="testimonial-avatar" aria-hidden="true">A</span>
+            <span class="testimonial-name">Ana Reyes</span>
           </div>
         </div>
 
         <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
           <p class="testimonial-text">"The sunset views here are unreal. Watching the golden sky melt over the cove is something I will never forget. Highly recommend!"</p>
-          <div class="testimonial-author">
-            <span class="testimonial-name">Miguel Fernando</span>
-            <span class="testimonial-role">Solo Traveler</span>
+          <div class="testimonial-profile">
+            <span class="testimonial-avatar" aria-hidden="true">K</span>
+            <span class="testimonial-name">Kevin Lim</span>
           </div>
         </div>
 
         <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
           <p class="testimonial-text">"From the private beach to the serene mangroves, everything was perfect. A peaceful retreat that balances luxury and nature beautifully."</p>
-          <div class="testimonial-author">
-            <span class="testimonial-name">Sofia Garcia</span>
-            <span class="testimonial-role">Barkada Group</span>
+          <div class="testimonial-profile">
+            <span class="testimonial-avatar" aria-hidden="true">G</span>
+            <span class="testimonial-name">Grace Aquino</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">"The food was incredible and locally sourced. Every meal felt like a celebration of Guimaras' rich flavors."</p>
+          <div class="testimonial-profile">
+            <span class="testimonial-avatar" aria-hidden="true">P</span>
+            <span class="testimonial-name">Paolo Fernandez</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">"A perfect balance of luxury and nature. The rooms were spotless, and the staff anticipated our every need."</p>
+          <div class="testimonial-profile">
+            <span class="testimonial-avatar" aria-hidden="true">R</span>
+            <span class="testimonial-name">Rhea Salvador</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">"We came for a weekend and stayed longer. The mangroves at sunrise are simply magical. We will be back!"</p>
+          <div class="testimonial-profile">
+            <span class="testimonial-avatar" aria-hidden="true">D</span>
+            <span class="testimonial-name">David Tan</span>
           </div>
         </div>
 
       </div>
     </div>
+    <div class="testimonial-nav">
+      <button class="testimonial-arrow testimonial-prev" aria-label="Previous testimonial">&#10094;</button>
+      <button class="testimonial-arrow testimonial-next" aria-label="Next testimonial">&#10095;</button>
+    </div>
 
   </div>
-</section>
-
-<!-- ================= CTA ================= -->
-<section class="cta">
-
-  <div class="container">
-
-    <h2>Ready for Your Island Getaway?</h2>
-
-    <p>
-      Book your stay today and experience nature,
-      relaxation, and adventure at Katunggan Cove Resort.
-    </p>
-
-    <br>
-
-    <a href="booking.php" class="btn">
-      Book Your Stay
-    </a>
-
-  </div>
-
 </section>
 
 <?php include '../includes/footer.php'; ?>
